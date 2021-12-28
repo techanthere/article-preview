@@ -1,0 +1,185 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --very-dark-grayish-blue:hsl(217, 19%, 35%) ;
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --main-white: rgb(255, 255, 255);
+  --font-manrope: 'Manrope', sans-serif;
+  --weight-medium: 500;
+  --weight-bold: 700;
+  --font-size: 13px;
+}
+body{
+  font-family: var(--font-manrope);
+  padding: 1rem;
+  font-size: var(--font-size);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-grayish-blue);
+}
+.main{
+  width: 25rem;
+  background-color: var(--main-white);
+  border-radius: 10px;
+}
+h1, h2{
+  color: var(--very-dark-grayish-blue);
+}
+.main__drawer-img{
+  max-width: 100%;
+  height: auto;
+  clip-path: inset(0 0 18% 0);
+  border-radius: 10px 10px 0 0;
+}
+.main__article__header{
+  padding: 1rem 2rem 0 2rem;
+}
+.main__article{
+  transform: translateY(-2rem);
+  display: grid;
+  gap: 1rem;
+  margin-bottom: -2rem;
+}
+h1{
+  font-weight: var(--weight-bold);
+  font-size: 1rem;
+}
+.main__article__desc{
+  padding: 0 2rem;
+}
+.main__article__desc, .main__article__footer--datetime, .main__article__footer--share-space{
+  color: var(--desaturated-dark-blue);
+}
+.main__article__footer--wrapper{
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  /* testing required */
+  align-items: center;
+  gap:1rem;
+}
+
+.main__article__footer--avatar{
+  width:50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.main__article__footer--text{
+  font-size: 0.6rem;
+  /* required testing */
+  font-weight: var(--weight-bold);
+}
+.main__article__footer--datetime{
+  font-weight: var(--weight-medium);
+  font-size: 0.8rem;
+}
+.main__article__footer--share-icon{
+  justify-self: flex-end;
+}
+.main__article__footer--popup{
+  display: flex;
+  background-color: var(--very-dark-grayish-blue);
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* display: none; */
+}
+.main__article__footer__icons{
+  display: flex;
+  padding: 2rem 0;
+}
+.main__article__footer--share-space{
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+.main__article__footer--icon{
+  margin-right: 1rem;
+}
+.main__article__footer--share-icon{
+  background-color: var(--light-grayish-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  width:40px;
+  height: 40px;
+}
+@media(min-width:700px){
+  .main{
+    width: 40rem;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+  }
+  .main__drawer-img{
+    /* reset clip-path in image */
+    clip-path: inset(0 80px 0 0);
+    width: 300px;
+    height: auto;
+    }
+  .main__article{
+    background-color: #fff;
+    transform: translateX(-5rem);
+    gap: 0.5rem;
+    /* Reset style for larger screens */
+    margin: 0;
+    margin-right: -5rem;
+  }
+  .main__article__header{
+    /* Reset style for larger screens */
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0 2rem;
+  }
+  .main__article__footer--popup{
+    display: inherit;
+    left: 50%;
+    top: 90px;
+    position: absolute;
+    transform: translate(30%, -20%);
+    width: 200px;
+    height: auto;
+    text-align: center;
+    display: flex;
+    background: var(--very-dark-grayish-blue);
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 8px;
+    padding: 0.8rem;
+    pointer-events: none;
+    box-shadow: 0 4px 5px #bbb;
+    transition: all 0.3s ease;
+  }
+  .main__article__footer--popup:before{
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 50%;
+    background: var(--very-dark-grayish-blue);
+    bottom: -9px;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1;
+  }
+  .main__article__footer--icon{
+    width: 15px;
+    height: auto;
+    margin-right: 0.5rem;
+  }
+  .main__article__footer--popup .main__article__footer--share-icon{
+    display: none;
+  }
+  .main__article__desc{
+    padding: 0 2rem;
+    }
+}
