@@ -28,7 +28,7 @@
 
 body {
   font-family: var(--font-manrope);
-  padding: 2rem;
+  padding: 2rem 0.5rem;
   font-size: var(--font-size);
   min-height: 100vh;
   display: flex;
@@ -77,10 +77,6 @@ h2 {
 .main__desc,
 .main__footer-datetime {
   color: var(--desaturated-darker-blue);
-}
-
-.main__footer-share-space {
-  color: var(--light-grayish-blue);
 }
 
 .main__footer--wrapper {
@@ -138,12 +134,12 @@ h2 {
   margin-top: -5rem;
   align-items: center;
   display: none;
-  /* transition: display 0.3s ease; */
 }
 
 .main__footer-share-space {
   letter-spacing: 0.3em;
   text-transform: uppercase;
+  color: var(--light-grayish-blue);
 }
 
 .main__footer-icons {
@@ -167,9 +163,6 @@ h2 {
     background-color: #fff;
     display: flex;
     position: relative;
-    /* Reset style for larger screens */
-    margin: 0;
-    padding: 0;
   }
 
   .main__image {
@@ -218,7 +211,6 @@ h2 {
     right: 0.8rem;
     position: absolute;
     transform: translate(30%, -20%);
-    /* width: 1rem; */
     height: auto;
     text-align: center;
     display: flex;
