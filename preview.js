@@ -3,19 +3,15 @@
 */
 
 function shareFunction(){
-  const popup = document.querySelector(".main___footer-popup");
-  const share = document.getElementById("click");
-  const icon = document.querySelector(".share_icon");
-  if (popup.style.display === "flex") {
-    popup.style.display = "none";
-    share.style.backgroundColor = "var(--light-grayish-blue)";
+  const article = document.querySelector(".main__article");
+  const popup = document.querySelector(".main__footer-popup");
+  const share = document.querySelector(".main__footer-share-icon");
+  if(popup.style.display === "flex"){
+    article.classList.remove("main__article-custom");
     share.setAttribute("aria-expanded", false);
-    icon.style.mixBlendMode = "normal";
   }
   else{
-    popup.style.display = "flex";
-    share.style.backgroundColor = "var(--some-gray-shade)";
+    article.classList.toggle("main__article-custom");
     share.setAttribute("aria-expanded", true);
-    icon.style.mixBlendMode = "color-dodge"
   }
 }
