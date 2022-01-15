@@ -43,6 +43,15 @@ body {
   border-radius: var(--default-border-radius);
 }
 
+.sr-only{
+   position:absolute;
+   left:-10000px;
+   top:auto;
+   width:1px;
+   height:1px;
+   overflow:hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -139,6 +148,8 @@ h2 {
 .main__footer-share-space {
   letter-spacing: 0.3em;
   text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: var(--weight-medium);
   color: var(--light-grayish-blue);
 }
 
