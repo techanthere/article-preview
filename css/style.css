@@ -22,6 +22,7 @@
   /* font size and styling  */
   --font-manrope: 'Manrope', sans-serif;
   --font-size: 0.8125rem;
+  --font-size-medium: 0.8rem;
   --weight-medium: 500;
   --weight-bold: 700;
 }
@@ -114,7 +115,7 @@ h2 {
 
 .main__footer-datetime {
   font-weight: var(--weight-medium);
-  font-size: 0.8rem;
+  font-size: var(--font-size-medium);
 }
 
 .main__footer-share-icon {
@@ -148,7 +149,7 @@ h2 {
 .main__footer-share-space {
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: var(--font-size-medium);
   font-weight: var(--weight-medium);
   color: var(--light-grayish-blue);
 }
@@ -222,7 +223,7 @@ h2 {
   }
 
   .main__desc {
-    font-size: 0.8rem;
+    font-size: var(--font-size-medium);
     margin-bottom: 0.5rem;
   }
 
